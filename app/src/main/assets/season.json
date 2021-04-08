@@ -1,0 +1,23 @@
+[
+  {
+    "cat" : "season",
+    "title" : "Pain d'épice",
+    "author" : "Christophe Michalak",
+    "img" : "r_default",
+    "difficulty" : 3
+  },
+  {
+    "cat" : "season",
+    "title" : "Tarte aux fraises",
+    "author" : "Jean-Paul Hévin",
+    "img" : "r_default",
+    "difficulty" : 1
+  },
+  {
+    "cat" : "season",
+    "title" : "Mouna",
+    "author" : "Gaston Lenôtre",
+    "img" : "r_default",
+    "difficulty" : 2
+  }
+]

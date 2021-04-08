@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ressources>
+    <recipe cat="tradition"
+        title="Macarons"
+        author="Cédric Grolet"
+        img="r_macarons"
+        difficulty = "star_5"
+        />
+    <recipe cat="tradition"
+        title="Eclair au chocolat"
+        author="Philippe Conticini"
+        img="r_eclair_chocolat"
+        difficulty = "star_4"
+        />
+    <recipe cat="tradition"
+        title="Brioche"
+        author="Pierre Hermé"
+        img="r_brioche"
+        difficulty = "star_2"
+        />
+</ressources>
