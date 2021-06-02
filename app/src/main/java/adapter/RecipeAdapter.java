@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
 import com.example.nesti_mes_recettes.R;
 
 import java.util.ArrayList;
@@ -40,7 +41,11 @@ public class RecipeAdapter extends ArrayAdapter<Recipe> {
         author.setText(one_recipe.getAuthor());
 
         ImageView imageView = result.findViewById(R.id.line_recipe_imageView_recipe);
-        imageView.setImageResource(one_recipe.getImgId());
+   //     imageView.setImageResource(one_recipe.getImgId());
+
+        Glide.with(imageView.getContext())
+                .load(one_recipe.getImagePath())
+                .into(imageView);
 
         ImageView starView = result.findViewById(R.id.line_recipe_imageView_star);
         starView.setImageResource(one_recipe.getRating());

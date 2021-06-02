@@ -1,25 +1,13 @@
 package com.example.nesti_mes_recettes;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import java.util.ArrayList;
 
@@ -27,7 +15,7 @@ import adapter.RecipeAdapter;
 import entity.Recipe;
 import model.GlutenViewModel;
 
-public class GlutenActivity extends AppCompatActivity {
+public class RecipeActivity extends AppCompatActivity {
 
 
     @Override
@@ -52,7 +40,7 @@ public class GlutenActivity extends AppCompatActivity {
             list_view.setAdapter(adapter);
 
             list_view.setOnItemClickListener((parent, view, position, id) -> {
-                Intent intent = new Intent(GlutenActivity.this, IngredientActivity.class);
+                Intent intent = new Intent(RecipeActivity.this, IngredientActivity.class);
                     // on récupére la recette en cours
                 final Recipe recipe = (Recipe) parent.getItemAtPosition(position);
 
@@ -70,7 +58,7 @@ public class GlutenActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GlutenActivity.this.finish();
+                RecipeActivity.this.finish();
             }
         });
 

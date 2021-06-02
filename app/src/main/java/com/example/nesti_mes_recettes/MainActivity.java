@@ -145,6 +145,8 @@ public class MainActivity extends AppCompatActivity {
                 switch (pItem.getItemId()) {
                     case R.id.menu_search:
                         //   Log.i("LogNesti", "Menu : Recherche");
+                        Intent searchIntent = new Intent (MainActivity.this, SearchActivity.class);
+                        startActivity(searchIntent);
                         Toast t_search = Toast.makeText(this, "Menu : Recherche", Toast.LENGTH_SHORT);
                         t_search.show();
                         break;
@@ -154,8 +156,8 @@ public class MainActivity extends AppCompatActivity {
                         t_list.show();
                         break;
                     case R.id.menu_contact:
-                        Intent intent = new Intent(MainActivity.this, TabRecipeActivity.class);
-                        startActivity(intent);
+                        Intent contactIntent = new Intent(MainActivity.this, TabRecipeActivity.class);
+                        startActivity(contactIntent);
                         Toast t_contact = Toast.makeText(this, "Menu : contact", Toast.LENGTH_SHORT);
                         t_contact.show();
                         break;

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nesti_mes_recettes</string>
+    <string name="app_name">Nesti mes recettes</string>
     <string name="txt_btn_season">C\'est de saison</string>
     <string name="txt_field_title">Choisissez une catégorie</string>
     <string name="txt_btn_easy">Facile à faire</string>
@@ -26,4 +26,25 @@
     <string name="tab_text_1">Préparations</string>
     <string name="tab_text_2">Ingrédients</string>
     <string name="textview">TextView</string>
+    <string name="line_ing_txtView_ingredient">ingredient</string>
+    <string name="line_ingredient_txtView_quantity">50</string>
+    <string name="line_ingredient_txtView_unit">unit ingredient</string>
+    <string name="ingredient_txt_tile">Liste des ingrédients</string>
+    <string name="preparation_btn">Préparation</string>
+    <string name="preparation_txt_title">Liste des préparations</string>
+    <string name="goToIngredient_btn">Ingrédient</string>
+    <string name="addshoppingcart">addShoppingCart</string>
+    <string name="line_preparation_txt_title">preparation</string>
+    <string name="line_preparation_txt_order">order</string>
+    <string name="search_txtView_title">Rechercher</string>
+    <string name="search_txtView_subtitle">Quelle recette recherchez-vous?</string>
+    <string name="search_btn_ok">OK</string>
+    <string name="txt_placeholder_recipe_name">Nom d\'une recette</string>
+    <string name="result_txtView_title">Résultats de recherche</string>
+    <string name="result_txtView_term">recette</string>
+    <string name="lineResult_nameRecipe">recette</string>
+    <string name="lineResult_btn_see">VOIR</string>
+    <string name="cart_title">Liste des courses</string>
+    <string name="cart_btn_empty">Vider la liste</string>
+    <string name="line_cart_ingredient">ingredient</string>
 </resources>
