@@ -17,10 +17,13 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    String token = "634e733cc8aa05ae6b5266d9f6fa504f693fb6c5f1b4f2b5dd1739dec131b397";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //   Gestion du bouton associé à la ressource bt_easy
         final Button btnEasy = (Button) findViewById(R.id.main_btn_easy);
@@ -37,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int which){
                             //affiche msg
                             Toast.makeText(getApplicationContext(), btnEasy.getText(), Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(MainActivity.this, EasyActivity.class);
+                            Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                            intent.putExtra("tagName", "easy");
+                            intent.putExtra("token", token);
                             startActivity(intent);
                         }
                 });
@@ -62,7 +67,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which){
                         Toast.makeText(getApplicationContext(), btnTraditionnal.getText(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, TradtionnalActivity.class);
+                        Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                        intent.putExtra("tagName", "traditional");
+                        intent.putExtra("token", token);
                         startActivity(intent);
                     }
                 });
@@ -89,7 +96,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which){
                         Toast.makeText(getApplicationContext(), btnSeason.getText(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, SeasonnalActivity.class);
+                        Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                        intent.putExtra("tagName", "seasonnal");
+                        intent.putExtra("token", token);
                         startActivity(intent);
                     }
                 });
@@ -113,7 +122,9 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which){
                             Toast.makeText(getApplicationContext(), btnfreeGluten.getText(), Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(MainActivity.this, GlutenActivity.class);
+                            Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                            intent.putExtra("tagName", "glutenFree");
+                            intent.putExtra("token", token);
                             startActivity(intent);
                         }
                     });
@@ -146,26 +157,34 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.menu_search:
                         //   Log.i("LogNesti", "Menu : Recherche");
                         Intent searchIntent = new Intent (MainActivity.this, SearchActivity.class);
+                        searchIntent.putExtra("token", token);
                         startActivity(searchIntent);
                         Toast t_search = Toast.makeText(this, "Menu : Recherche", Toast.LENGTH_SHORT);
                         t_search.show();
                         break;
                     case R.id.menu_list:
                         //      Log.i("LogNesti", "Menu : Liste de course");
+                        Intent listIntent = new Intent (MainActivity.this, ShoppingCartActivity.class);
+                        startActivity(listIntent);
                         Toast t_list = Toast.makeText(this, "Menu : liste de course", Toast.LENGTH_SHORT);
                         t_list.show();
                         break;
                     case R.id.menu_contact:
-                        Intent contactIntent = new Intent(MainActivity.this, TabRecipeActivity.class);
+                        Intent contactIntent = new Intent (MainActivity.this, ContactActivity.class);
                         startActivity(contactIntent);
                         Toast t_contact = Toast.makeText(this, "Menu : contact", Toast.LENGTH_SHORT);
                         t_contact.show();
+
                         break;
                     case R.id.menu_team:
+                        Intent teamIntent = new Intent (MainActivity.this, EquipeActivity.class);
+                        startActivity(teamIntent);
                         Toast t_team = Toast.makeText(this, "Menu : équipe", Toast.LENGTH_SHORT);
                         t_team.show();
                         break;
                     case R.id.menu_project:
+                        Intent projectIntent = new Intent (MainActivity.this, ProjectActivity.class);
+                        startActivity(projectIntent);
                         Toast t_project = Toast.makeText(this, "Menu : projet", Toast.LENGTH_SHORT);
                         t_project.show();
                         break;

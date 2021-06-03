@@ -14,6 +14,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.nesti_mes_recettes.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -42,7 +43,8 @@ public class StepViewModel extends AndroidViewModel {
     }
 
     private void loadIngredients(String idRecipe){
-        String url = "http://10.0.2.2/www/PHP/NestiECommerce/public/api/recipes/" + idRecipe + "/step";
+        String token = getApplication().getApplicationContext().getResources().getString(R.string.nomApi_token);
+        String url = "http://10.0.2.2/www/PHP/NestiECommerce/public/api/recipes/" + idRecipe + "/step?token=" + token ;
         requestApi(url);
     }
 
@@ -83,7 +85,7 @@ public class StepViewModel extends AndroidViewModel {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Step step = new Step();
-                step.setOrderParagraph(String.valueOf(jsonObject.getInt("order")+1));
+                step.setOrderParagraph(String.valueOf(i+1));
                 step.setContentParagraph(jsonObject.getString("paragraph"));
 
                 steps.getValue().add(step);

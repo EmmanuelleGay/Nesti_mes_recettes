@@ -28,6 +28,7 @@ public class StepActivity extends AppCompatActivity {
         setContentView(R.layout.activity_step);
 
         final String recipeId = getIntent().getStringExtra("recipeId");
+        String token = getIntent().getStringExtra("token");
 
         // pour faire appel au model
         StepViewModel stepViewModel = new ViewModelProvider.AndroidViewModelFactory(this.getApplication()).create(StepViewModel.class);
@@ -38,7 +39,6 @@ public class StepActivity extends AppCompatActivity {
             ListView list_view = (ListView) findViewById(R.id.prepation_listView);
             StepAdapter stepAdapter = new StepAdapter(this,R.layout.line_preparation,(ArrayList<Step>) steps);
             list_view.setAdapter(stepAdapter);
-
         });;
 
 

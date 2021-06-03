@@ -17,7 +17,9 @@ public class SearchActivity extends AppCompatActivity {
 
         EditText editText = findViewById(R.id.search_editTxt_recipe);
         Button btnSearchOk =  findViewById(R.id.search_btn_ok);
-       
+
+        String token = getIntent().getStringExtra("token");
+
         btnSearchOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,6 +28,7 @@ public class SearchActivity extends AppCompatActivity {
 
                 //add extra "term"
                 intent.putExtra("term", term);
+                intent.putExtra("token", token);
                 startActivity(intent);
             }
         });

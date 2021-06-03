@@ -4,37 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TradtionnalActivity">
+    tools:context=".GlutenActivity">
 
     <TextView
-        android:id="@+id/traditionnal_txt_title"
+        android:id="@+id/category_txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="@string/txt_title_traditionnal"
         android:textSize="@dimen/dimens_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/traditionnal_btn_back"
+        android:id="@+id/category_btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="@string/traditionnal_btn_back"
+        android:text="@string/gluten_btn_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
-        android:id="@+id/traditionnal_listView"
+        android:id="@+id/category_listView"
         android:layout_width="413dp"
         android:layout_height="450dp"
         android:layout_marginTop="36dp"
         android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/traditionnal_btn_back"
+        app:layout_constraintBottom_toTopOf="@+id/category_btn_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/traditionnal_txt_title" />
+        app:layout_constraintTop_toBottomOf="@+id/category_txt_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

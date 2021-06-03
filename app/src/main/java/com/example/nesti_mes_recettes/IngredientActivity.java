@@ -20,7 +20,6 @@ import model.IngredientViewModel;
 
 public class IngredientActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

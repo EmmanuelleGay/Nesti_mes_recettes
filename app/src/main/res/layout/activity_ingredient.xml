@@ -20,35 +20,33 @@
     <ListView
         android:id="@+id/ingredient_listView"
         android:layout_width="400dp"
-        android:layout_height="308dp"
+        android:layout_height="367dp"
         android:layout_marginTop="36dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/ing_shoppingCart_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ingredient_txt_title"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintTop_toBottomOf="@+id/ingredient_txt_title" />
 
     <Button
         android:id="@+id/goToPreparation_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginStart="48dp"
         android:text="@string/preparation_btn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredient_listView" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/ing_shoppingCart_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="120dp"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toEndOf="@+id/goToPreparation_btn"
+        app:layout_constraintTop_toBottomOf="@+id/ingredient_listView"
         app:srcCompat="@drawable/cart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

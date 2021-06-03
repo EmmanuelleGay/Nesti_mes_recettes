@@ -14,6 +14,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.nesti_mes_recettes.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -24,9 +25,13 @@ import java.util.List;
 import entity.Recipe;
 
 
-public class RecipeViewModel extends AndroidViewModel {
 
-    public RecipeViewModel(@NonNull Application application) {
+public class CategoryViewModel extends AndroidViewModel {
+
+    private String categoryName;
+
+
+    public CategoryViewModel(@NonNull Application application) {
 
         super(application);
     }
@@ -37,6 +42,7 @@ public class RecipeViewModel extends AndroidViewModel {
 
     //Si les données des recettes n'existent pas (sont nulles), alors on les instancie et on les remplit
     public LiveData<List<Recipe>> getRecipes() {
+
         if (recipes == null) {
             recipes = new MutableLiveData<List<Recipe>>();
             loadRecipes();
@@ -45,13 +51,14 @@ public class RecipeViewModel extends AndroidViewModel {
     }
 
     private void loadRecipes() {
-        String url = "http://10.0.2.2/www/PHP/NestiECommerce/public/api/category/glutenFree";
+        String token = getApplication().getApplicationContext().getResources().getString(R.string.nomApi_token);
+        String url = "http://10.0.2.2/www/PHP/NestiECommerce/public/api/category/" + getCategoryName() + "?token=" + token;
         requestApi(url);
     }
 
     private void requestApi(String url) {
         // String url = "http://192.168.1.14/www/PHP/NestiECommerce/public/api/category/glutenFree";
-        // adresee pour emulateur :
+        // adresse pour emulateur :
         // String url = "http://10.0.2.2/www/PHP/NestiECommerce/public/api/category/glutenFree";
         final RequestQueue request_queue = Volley.newRequestQueue(getApplication().getApplicationContext());
         JsonArrayRequest array_request = new JsonArrayRequest(
@@ -60,7 +67,6 @@ public class RecipeViewModel extends AndroidViewModel {
                     @Override
                     public void onResponse(JSONArray response) {
                         JsonArrayToRecipes(response);
-                        Log.i("NestiLog", response.toString());
                     }
                 },
                 new Response.ErrorListener() {
@@ -121,6 +127,15 @@ public class RecipeViewModel extends AndroidViewModel {
     private int getResourceImageIdentifier(String nameImage) {
         String path = getApplication().getPackageName() + ":drawable/" + nameImage;
         return getApplication().getResources().getIdentifier(path, null, null);
+    }
+
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
 }

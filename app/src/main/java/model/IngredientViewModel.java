@@ -14,6 +14,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.nesti_mes_recettes.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -43,7 +44,8 @@ public class IngredientViewModel extends AndroidViewModel
     }
 
     private void loadIngredients(String idRecipe){
-        String url = "http://10.0.2.2/www/PHP/NestiECommerce/public/api/recipes/" + idRecipe + "/ingredient";
+        String token = getApplication().getApplicationContext().getResources().getString(R.string.nomApi_token);
+        String url = "http://10.0.2.2/www/PHP/NestiECommerce/public/api/recipes/" + idRecipe + "/ingredient?token=" + token;
         requestApi(url);
     }
 
@@ -80,8 +82,6 @@ public class IngredientViewModel extends AndroidViewModel
 
         ingredients.setValue(new ArrayList<>());
         try {
-            Log.i("LogNesti", "Nombre d'enregistrements :" + jsonArray.length());
-
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Ingredient ing = new Ingredient();

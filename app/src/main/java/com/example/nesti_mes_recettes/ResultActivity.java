@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -30,22 +32,20 @@ public class ResultActivity extends AppCompatActivity {
 
         //reception du terme a rechercher
         String term = this.getIntent().getStringExtra("term");
+        String token = getIntent().getStringExtra("token");
 
         //modification du textView
         TextView textView = findViewById(R.id.result_txtView_term);
         textView.setText(term);
 
         ResultViewModel resultViewModel = new ViewModelProvider.AndroidViewModelFactory(this.getApplication()).create(ResultViewModel.class);
-        resultViewModel.getRecipes(term).observe(this, recipes -> {
+        resultViewModel.getRecipes(term,token).observe(this, recipes -> {
 
         ListView list_view = (ListView) findViewById(R.id.result_listView);
         ResultAdapter resultAdapter = new ResultAdapter(this,R.layout.line_ingredient,(ArrayList<Recipe>) recipes);
         list_view.setAdapter(resultAdapter);
 
-
             });
-
-
     }
 }
 

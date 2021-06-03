@@ -11,11 +11,11 @@
     <string name="txt_menu_contact">Contact</string>
     <string name="txt_menu_team">Equipe</string>
     <string name="txt_menu_project">Projet</string>
-    <string name="txt_title_easy">Liste des recettes faciles</string>
     <string name="easy_btn_back">RETOUR</string>
-    <string name="txt_title_traditionnal">Liste des recettes traditionnelles</string>
+    <string name="txt_title_easy">Liste des recettes faciles</string>
+    <string name="txt_title_traditional">Liste des recettes traditionnelles</string>
     <string name="txt_title_seasonnal">Liste des recettes de saison</string>
-    <string name="txt_gluten_title">Liste des recettes sans gluten</string>
+    <string name="txt_title_glutenFree">Liste des recettes sans gluten</string>
     <string name="gluten_btn_back">RETOUR</string>
     <string name="traditionnal_btn_back">RETOUR</string>
     <string name="seasonnal_btn_back">RETOUR</string>
@@ -47,4 +47,31 @@
     <string name="cart_title">Liste des courses</string>
     <string name="cart_btn_empty">Vider la liste</string>
     <string name="line_cart_ingredient">ingredient</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="contact_txtView_Title">Contact</string>
+    <string name="contact_txtView_name">Emmanuelle Gay</string>
+    <string name="contact_txtView_tel">06 50 62 04 52</string>
+    <string name="contact_txtView_email">emmanuellegay.13@gmail.com</string>
+    <string name="contact_linkPortfolio">https://gay.needemand.com/</string>
+    <string name="contact_presentation"> Après 10 années d\'expérience dans le retail, je suis aujourd\'hui en reconvertion professionnelle pour devenir développeuse d\'applications. Très motivée, je souhaite capitaliser sur mes expériences précédentes et ma formation technique dans un nouveau projet. </string>
+    <string name="equipe_txtView_title">Equipe</string>
+    <string name="equipe_txtView_thanks">"Un grand merci à toute la promotion CDA et à Agnès pour leur soutient. Avec une mention spéciale (malgré leur tête de bagnard) pour : </string>
+    <string name="equipe_Erik">Erik</string>
+    <string name="erik">Erik</string>
+    <string name="ahmed">Ahmed</string>
+    <string name="equipe_ahmed">Ahmed</string>
+    <string name="project_title">Projet</string>
+    <string name="project_content">Fondé en 1984 par les Frères Hernandez, notre établissement a fourni un excellent chocolat venant des quatres coins du monde. C\'est en 1945, que Marina Hernadez, decide de diversifier l\'entreprise familiale, sans perdre en prestige. Nesti devint alors une référence dans le monde de la patisserie Nous consacrons notre temps à trouver les meilleurs ingrédients à travers le monde.  Afin que vous puissiez en famille et entre amis continuer à perpetuer l\'art de la patisserie. Parce que c\'est toujours un plaisir de partager !</string>
+    <string name="project_subtitle">Contexte du projet fil rouge</string>
+    <string name="project_context">Projet réalisé dans le cadre d\'une formation. En partie en groupe et en partie individuellement, ce projet est le résultat d\'un apprentissage lors d\'une formation.  Temps de réalisation du projet 5 mois environ</string>
+    <string name="porject_company">Entreprise Nesti</string>
+    <string name="nomApi_token">634e733cc8aa05ae6b5266d9f6fa504f693fb6c5f1b4f2b5dd1739dec131b397</string>
 </resources>

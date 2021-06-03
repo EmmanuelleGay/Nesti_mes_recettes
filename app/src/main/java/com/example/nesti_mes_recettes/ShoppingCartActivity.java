@@ -2,7 +2,6 @@ package com.example.nesti_mes_recettes;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import java.util.ArrayList;
 import adapter.ShoppingCartAdapter;
 import data.sqlite.TableCart;
 import entity.Ingredient;
-import model.ShoppingCartViewModel;
 
 public class ShoppingCartActivity extends AppCompatActivity {
 

@@ -32,17 +32,17 @@ public class ResultViewModel extends AndroidViewModel {
 
     private MutableLiveData<List<Recipe>> recipes;
 
-    public LiveData<List<Recipe>> getRecipes(String search) {
+    public LiveData<List<Recipe>> getRecipes(String search, String token) {
         if (recipes == null) {
             recipes = new MutableLiveData<List<Recipe>>();
-            loadRecipes(search);
+            loadRecipes(search, token);
         }
         return recipes;
     }
 
 
-    private void loadRecipes(String search){
-        String url = "http://10.0.2.2/www/PHP/NestiECommerce/public/api/search/" + search ;
+    private void loadRecipes(String search, String token){
+        String url = "http://10.0.2.2/www/PHP/NestiECommerce/public/api/search/" + search + "?token=" + token ;
         requestApi(url);
     }
 

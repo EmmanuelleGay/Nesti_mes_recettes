@@ -11,20 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nesti_mes_recettes">
-        <activity android:name=".ShoppingCartActivity"></activity>
+        <activity android:name=".ProjectActivity"></activity>
+        <activity android:name=".EquipeActivity" />
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".ShoppingCartActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".StepActivity" />
         <activity android:name=".IngredientActivity" />
-        <activity android:name=".TabRecipeActivity$IngredientActivity" />
-        <activity
-            android:name=".TabRecipeActivity"
-            android:label="@string/title_activity_tab_recipe"
-            android:theme="@style/Theme.Nesti_mes_recettes.NoActionBar" />
-        <activity android:name=".GlutenActivity" />
-        <activity android:name=".SeasonnalActivity" />
-        <activity android:name=".TradtionnalActivity" />
-        <activity android:name=".EasyActivity" />
+        <activity android:name=".CategoryActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
